@@ -21,7 +21,9 @@ void \mbox{\hyperlink{classrequest_queue_a371e163188314533554892e2a53cdca2}{add\
 \mbox{\hyperlink{structrequest}{request}} \mbox{\hyperlink{classrequest_queue_a49ba3ad17fe671524dcb2a33ebeeeed3}{get\+Next\+Request}} ()
 \begin{DoxyCompactList}\small\item\em Get the next request from the queue. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classrequest_queue_a4d673ab105fa9ca759a5a98e415f1148}{set\+Capacity}} (int cap)
-\begin{DoxyCompactList}\small\item\em Set the maximum capacity of the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the maximum capacity of the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrequest_queue_a9fc2d9d338bf94909ba0c33fcf1810e9}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size of the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -59,6 +61,19 @@ Get and remove the next request from the queue.
 
 \begin{DoxyReturn}{Returns}
 The next request in the queue. 
+\end{DoxyReturn}
+\Hypertarget{classrequest_queue_a9fc2d9d338bf94909ba0c33fcf1810e9}\index{requestQueue@{requestQueue}!getSize@{getSize}}
+\index{getSize@{getSize}!requestQueue@{requestQueue}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{classrequest_queue_a9fc2d9d338bf94909ba0c33fcf1810e9} 
+int request\+Queue\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the size of the queue. 
+
+\begin{DoxyReturn}{Returns}
+the size of the queue 
 \end{DoxyReturn}
 \Hypertarget{classrequest_queue_a407fba0125b48e5b6fe3c6271eb2c225}\index{requestQueue@{requestQueue}!isEmpty@{isEmpty}}
 \index{isEmpty@{isEmpty}!requestQueue@{requestQueue}}
