@@ -1,8 +1,9 @@
 #include "loadBalancer.h"
 #include "utils.h"
 
-// initializes the load balancer with number of servers
-loadBalancer::loadBalancer(int numServers) : currentTime(0) {
+// initializes the load balancer with number of servers and set queue capcity
+loadBalancer::loadBalancer(int numServers, int queueCap) : currentTime(0) {
+    requestQueue.setCapacity(queueCap);
     for (int i = 0; i < numServers; ++i) {
         servers.emplace_back(); // using emplace_back because servers are class type 
     }
@@ -60,7 +61,7 @@ void loadBalancer::run(int cycles) {
         }
         currentTime++;
 
-        for (int i = 0; i < rand() % 50; i++){
+        for (int i = 0; i < rand() % 10; i++){
             addRequest(generateRandomRequest());
         }
         

@@ -8,6 +8,7 @@ std::string generateRandomIP() {
            std::to_string(rand() % 256);
 }
 
+// a request usually takes at least 5 steps sp it random + 5
 request generateRandomRequest() {
-    return request(generateRandomIP(), generateRandomIP(), rand() % 10 + 1);
+    return request(generateRandomIP(), generateRandomIP(), rand() % 5 + 5);
 }

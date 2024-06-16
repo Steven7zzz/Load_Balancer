@@ -11,11 +11,14 @@ private:
     std::vector<webServer> servers; // represent the pool of servers
     requestQueue requestQueue; // the queue to manage incoming requests
     int currentTime; // the current time in clock cycles
-    std::vector<std::string> log;
+    std::vector<std::string> log; // Vector to store log messages
+    
+    // Private methods for internal use
     void addServer();
     void removeServer();
+    
 public:
-    loadBalancer(int numServers); 
+    loadBalancer(int numServers, int queueCap); 
     void addRequest(const request& req); 
     void balanceLoad(); 
     void run(int cycles);

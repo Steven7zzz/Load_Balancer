@@ -19,6 +19,7 @@ bool requestQueue::isEmpty() const {
     return queue.empty();
 }
 
+// get if the queue is full.
 bool requestQueue::isFull() const {
     return queue.size() >= capacity;
 }

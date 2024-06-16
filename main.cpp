@@ -12,8 +12,10 @@ int main() {
     std::cout << "Enter the run time (in clock cycles): ";
     std::cin >> runTime;
 
+    // queue.setCapacity(numServers * 100); 
+
     // initialize the load balancer with the specified number of servers.
-    loadBalancer loadBalancer(numServers);
+    loadBalancer loadBalancer(numServers, numServers * 100);
 
     // add initial set of requests to the load balancer.
     for (int i = 0; i < numServers * 100; ++i) {

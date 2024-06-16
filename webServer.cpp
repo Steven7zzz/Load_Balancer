@@ -30,6 +30,7 @@ void webServer::tick() {
     }
 }
 
+// Method to get details of the current request
 std::string webServer::getCurrentRequest() const {
     return currentRequest;
 }

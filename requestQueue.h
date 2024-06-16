@@ -9,11 +9,11 @@ private:
     std::queue<request> queue;
     int capacity;
 public:
-    requestQueue(int cap = 1000) : capacity(cap) {}
     bool isEmpty() const;
     bool isFull() const;
     void addRequest(const request& req);
     request getNextRequest();
+    void setCapacity(int cap) { capacity = cap; }
 };
 
 #endif

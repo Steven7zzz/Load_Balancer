@@ -7,7 +7,7 @@ class webServer {
 private:
     bool busy; // whether the server is currently processing a request.
     int remainingTime; // the remaining time to complete the current request.
-    std::string currentRequest;
+    std::string currentRequest; // IP addresses and time of the current request
 public:
     webServer(); 
     bool isBusy() const; 
