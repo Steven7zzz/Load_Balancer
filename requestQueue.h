@@ -53,6 +53,13 @@ public:
      * @param cap The maximum capacity to set for the queue.
      */
     void setCapacity(int cap) { capacity = cap; }
+
+    /**
+     * @brief Get the size of the queue.
+     *
+     * @return the size of the queue
+     */
+    int getSize() const;
 };
 
 #endif // REQUESTQUEUE_H

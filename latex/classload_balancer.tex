@@ -1,0 +1,113 @@
+\doxysection{load\+Balancer Class Reference}
+\hypertarget{classload_balancer}{}\label{classload_balancer}\index{loadBalancer@{loadBalancer}}
+
+
+Manages a pool of web servers and a queue of requests to balance loads.  
+
+
+
+
+{\ttfamily \#include $<$load\+Balancer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classload_balancer_a92e3303750c51852dc6d286cc6d538ac}{load\+Balancer}} (int num\+Servers, int queue\+Cap)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the load balancer with specified parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classload_balancer_ad7a50f50ec47adaa0851fa26bfb37360}{add\+Request}} (const \mbox{\hyperlink{structrequest}{request}} \&req)
+\begin{DoxyCompactList}\small\item\em Adds a new request to the load balancer\textquotesingle{}s request queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classload_balancer_a737119a3a32065bfcd9edfeba9c139cb}{balance\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Balances the load by distributing requests to available servers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classload_balancer_a48986b4c5be1913955f8c011856588ea}{run}} (int cycles)
+\begin{DoxyCompactList}\small\item\em Runs the load balancer simulation for a specified number of clock cycles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classload_balancer_a8be3bb6df2f5daf3e558c0ceff6dfd98}{save\+Log\+To\+File}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Saves the log messages to a text file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages a pool of web servers and a queue of requests to balance loads. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classload_balancer_a92e3303750c51852dc6d286cc6d538ac}\index{loadBalancer@{loadBalancer}!loadBalancer@{loadBalancer}}
+\index{loadBalancer@{loadBalancer}!loadBalancer@{loadBalancer}}
+\doxysubsubsection{\texorpdfstring{loadBalancer()}{loadBalancer()}}
+{\footnotesize\ttfamily \label{classload_balancer_a92e3303750c51852dc6d286cc6d538ac} 
+load\+Balancer\+::load\+Balancer (\begin{DoxyParamCaption}\item[{int}]{num\+Servers}{, }\item[{int}]{queue\+Cap}{}\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize the load balancer with specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Servers} & Number of servers to initialize. \\
+\hline
+{\em queue\+Cap} & Capacity of the request queue. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classload_balancer_ad7a50f50ec47adaa0851fa26bfb37360}\index{loadBalancer@{loadBalancer}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!loadBalancer@{loadBalancer}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily \label{classload_balancer_ad7a50f50ec47adaa0851fa26bfb37360} 
+void load\+Balancer\+::add\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrequest}{request}} \&}]{req}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new request to the load balancer\textquotesingle{}s request queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The request to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classload_balancer_a737119a3a32065bfcd9edfeba9c139cb}\index{loadBalancer@{loadBalancer}!balanceLoad@{balanceLoad}}
+\index{balanceLoad@{balanceLoad}!loadBalancer@{loadBalancer}}
+\doxysubsubsection{\texorpdfstring{balanceLoad()}{balanceLoad()}}
+{\footnotesize\ttfamily \label{classload_balancer_a737119a3a32065bfcd9edfeba9c139cb} 
+void load\+Balancer\+::balance\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Balances the load by distributing requests to available servers. 
+
+Balances the load by distributing requests from the queue to available servers. \Hypertarget{classload_balancer_a48986b4c5be1913955f8c011856588ea}\index{loadBalancer@{loadBalancer}!run@{run}}
+\index{run@{run}!loadBalancer@{loadBalancer}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{classload_balancer_a48986b4c5be1913955f8c011856588ea} 
+void load\+Balancer\+::run (\begin{DoxyParamCaption}\item[{int}]{cycles}{}\end{DoxyParamCaption})}
+
+
+
+Runs the load balancer simulation for a specified number of clock cycles. 
+
+Simulates the operation of the load balancer for a specified number of clock cycles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cycles} & Number of clock cycles to run the simulation. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classload_balancer_a8be3bb6df2f5daf3e558c0ceff6dfd98}\index{loadBalancer@{loadBalancer}!saveLogToFile@{saveLogToFile}}
+\index{saveLogToFile@{saveLogToFile}!loadBalancer@{loadBalancer}}
+\doxysubsubsection{\texorpdfstring{saveLogToFile()}{saveLogToFile()}}
+{\footnotesize\ttfamily \label{classload_balancer_a8be3bb6df2f5daf3e558c0ceff6dfd98} 
+void load\+Balancer\+::save\+Log\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption}) const}
+
+
+
+Saves the log messages to a text file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to save the log to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{load_balancer_8h}{load\+Balancer.\+h}}\item 
+\mbox{\hyperlink{load_balancer_8cpp}{load\+Balancer.\+cpp}}\end{DoxyCompactItemize}

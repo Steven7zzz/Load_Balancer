@@ -1,0 +1,30 @@
+\doxysection{request\+Queue.\+h}
+\hypertarget{request_queue_8h_source}{}\label{request_queue_8h_source}\mbox{\hyperlink{request_queue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REQUESTQUEUE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REQUESTQUEUE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{request_8h}{request.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrequest_queue}{requestQueue}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ std::queue<request>\ queue;\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrequest_queue_a407fba0125b48e5b6fe3c6271eb2c225}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrequest_queue_a497b44fb2d5023a60788b617d7a46c8f}{isFull}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrequest_queue_a371e163188314533554892e2a53cdca2}{addRequest}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structrequest}{request}}\&\ req);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{structrequest}{request}}\ \mbox{\hyperlink{classrequest_queue_a49ba3ad17fe671524dcb2a33ebeeeed3}{getNextRequest}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrequest_queue_a4d673ab105fa9ca759a5a98e415f1148}{setCapacity}}(\textcolor{keywordtype}{int}\ cap)\ \{\ capacity\ =\ cap;\ \}}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ REQUESTQUEUE\_H}}
+
+\end{DoxyCode}

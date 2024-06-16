@@ -26,7 +26,7 @@ int main() {
     std::cout << "Enter the run time (in clock cycles): ";
     std::cin >> runTime;
 
-    // Initialize the load balancer with the specified number of servers.
+    // Initialize the load balancer with the specified number of servers and capcity of the queue.
     loadBalancer loadBalancer(numServers, numServers * 100);
 
     // Add initial set of requests to the load balancer.

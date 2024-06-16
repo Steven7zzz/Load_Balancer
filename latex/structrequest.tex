@@ -1,0 +1,58 @@
+\doxysection{request Struct Reference}
+\hypertarget{structrequest}{}\label{structrequest}\index{request@{request}}
+
+
+Structure to represent a request with IP addresses and processing time.  
+
+
+
+
+{\ttfamily \#include $<$request.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrequest_a303e00f3847909f986c33cbc764740e2}{request}} (std\+::string in, std\+::string out, int t)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize a request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structrequest_aef8355708a261727fb4bccc1d9e3975a}\label{structrequest_aef8355708a261727fb4bccc1d9e3975a} 
+std\+::string {\bfseries ip\+Input}
+\begin{DoxyCompactList}\small\item\em IP address of the requester. \end{DoxyCompactList}\item 
+\Hypertarget{structrequest_a631d48ae2b5ee95e4a781698e871f6a4}\label{structrequest_a631d48ae2b5ee95e4a781698e871f6a4} 
+std\+::string {\bfseries ip\+Output}
+\begin{DoxyCompactList}\small\item\em IP address of the recipient. \end{DoxyCompactList}\item 
+\Hypertarget{structrequest_a153095eecc7c0aae5551654c3304faad}\label{structrequest_a153095eecc7c0aae5551654c3304faad} 
+int {\bfseries time}
+\begin{DoxyCompactList}\small\item\em Time in clock cycles required to process the request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure to represent a request with IP addresses and processing time. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structrequest_a303e00f3847909f986c33cbc764740e2}\index{request@{request}!request@{request}}
+\index{request@{request}!request@{request}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily \label{structrequest_a303e00f3847909f986c33cbc764740e2} 
+request\+::request (\begin{DoxyParamCaption}\item[{std\+::string}]{in}{, }\item[{std\+::string}]{out}{, }\item[{int}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize a request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & IP address of the requester. \\
+\hline
+{\em out} & IP address of the recipient. \\
+\hline
+{\em t} & Time in clock cycles required to process the request. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{request_8h}{request.\+h}}\end{DoxyCompactItemize}

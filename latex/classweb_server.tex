@@ -1,0 +1,113 @@
+\doxysection{web\+Server Class Reference}
+\hypertarget{classweb_server}{}\label{classweb_server}\index{webServer@{webServer}}
+
+
+The \doxylink{classweb_server}{web\+Server} class represents a server capable of processing requests.  
+
+
+
+
+{\ttfamily \#include $<$web\+Server.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classweb_server_a2c770daf0997221690a171b6facecca3}{web\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classweb_server}{web\+Server}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classweb_server_a1834badfe4eb89984d7c9f02070d64e2}{is\+Busy}} () const
+\begin{DoxyCompactList}\small\item\em Check if the server is currently busy processing a request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classweb_server_a1fde9a3c169a7f66311aec6024f7d8d1}{process\+Request}} (const \mbox{\hyperlink{structrequest}{request}} \&req)
+\begin{DoxyCompactList}\small\item\em Start processing a new request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classweb_server_ab872acab0f1fd3b7dd9477c38fa6c392}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Simulate the passage of time while processing a request. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classweb_server_aa35e988aac6aa527c66e8ce8dd3c84dc}{get\+Current\+Request}} () const
+\begin{DoxyCompactList}\small\item\em Get details of the current request being processed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classweb_server_ab69e8dc6e90d1254a438ffb6c39805fa}\label{classweb_server_ab69e8dc6e90d1254a438ffb6c39805fa} 
+bool {\bfseries just\+Finished}
+\begin{DoxyCompactList}\small\item\em Flag to indicate if the server has just finished processing a request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classweb_server}{web\+Server} class represents a server capable of processing requests. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classweb_server_a2c770daf0997221690a171b6facecca3}\index{webServer@{webServer}!webServer@{webServer}}
+\index{webServer@{webServer}!webServer@{webServer}}
+\doxysubsubsection{\texorpdfstring{webServer()}{webServer()}}
+{\footnotesize\ttfamily \label{classweb_server_a2c770daf0997221690a171b6facecca3} 
+web\+Server\+::web\+Server (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{classweb_server}{web\+Server}. 
+
+Initializes the server as not busy with no remaining time. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classweb_server_aa35e988aac6aa527c66e8ce8dd3c84dc}\index{webServer@{webServer}!getCurrentRequest@{getCurrentRequest}}
+\index{getCurrentRequest@{getCurrentRequest}!webServer@{webServer}}
+\doxysubsubsection{\texorpdfstring{getCurrentRequest()}{getCurrentRequest()}}
+{\footnotesize\ttfamily \label{classweb_server_aa35e988aac6aa527c66e8ce8dd3c84dc} 
+std\+::string web\+Server\+::get\+Current\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get details of the current request being processed. 
+
+\begin{DoxyReturn}{Returns}
+String representation of the current request. 
+\end{DoxyReturn}
+\Hypertarget{classweb_server_a1834badfe4eb89984d7c9f02070d64e2}\index{webServer@{webServer}!isBusy@{isBusy}}
+\index{isBusy@{isBusy}!webServer@{webServer}}
+\doxysubsubsection{\texorpdfstring{isBusy()}{isBusy()}}
+{\footnotesize\ttfamily \label{classweb_server_a1834badfe4eb89984d7c9f02070d64e2} 
+bool web\+Server\+::is\+Busy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if the server is currently busy processing a request. 
+
+\begin{DoxyReturn}{Returns}
+true if the server is busy, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classweb_server_a1fde9a3c169a7f66311aec6024f7d8d1}\index{webServer@{webServer}!processRequest@{processRequest}}
+\index{processRequest@{processRequest}!webServer@{webServer}}
+\doxysubsubsection{\texorpdfstring{processRequest()}{processRequest()}}
+{\footnotesize\ttfamily \label{classweb_server_a1fde9a3c169a7f66311aec6024f7d8d1} 
+void web\+Server\+::process\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrequest}{request}} \&}]{req}{}\end{DoxyParamCaption})}
+
+
+
+Start processing a new request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The request to be processed.\\
+\hline
+\end{DoxyParams}
+Sets the server to busy, initializes remaining processing time, and records details of the current request.
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The request to be processed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classweb_server_ab872acab0f1fd3b7dd9477c38fa6c392}\index{webServer@{webServer}!tick@{tick}}
+\index{tick@{tick}!webServer@{webServer}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily \label{classweb_server_ab872acab0f1fd3b7dd9477c38fa6c392} 
+void web\+Server\+::tick (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Simulate the passage of time while processing a request. 
+
+Decrements the remaining processing time each clock cycle. Updates the busy status and sets just\+Finished flag when the request is completed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{web_server_8h}{web\+Server.\+h}}\item 
+web\+Server.\+cpp\end{DoxyCompactItemize}

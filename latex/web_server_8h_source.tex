@@ -1,0 +1,32 @@
+\doxysection{web\+Server.\+h}
+\hypertarget{web_server_8h_source}{}\label{web_server_8h_source}\mbox{\hyperlink{web_server_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ WEBSERVER\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ WEBSERVER\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{request_8h}{request.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classweb_server}{webServer}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ busy;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ remainingTime;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ currentRequest;\ \ \ \ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classweb_server_a2c770daf0997221690a171b6facecca3}{webServer}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classweb_server_a1834badfe4eb89984d7c9f02070d64e2}{isBusy}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classweb_server_a1fde9a3c169a7f66311aec6024f7d8d1}{processRequest}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structrequest}{request}}\&\ req);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classweb_server_ab872acab0f1fd3b7dd9477c38fa6c392}{tick}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ std::string\ \mbox{\hyperlink{classweb_server_aa35e988aac6aa527c66e8ce8dd3c84dc}{getCurrentRequest}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classweb_server_ab69e8dc6e90d1254a438ffb6c39805fa}{justFinished}};\ \ }
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WEBSERVER\_H}}
+
+\end{DoxyCode}

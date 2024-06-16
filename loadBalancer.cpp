@@ -14,6 +14,7 @@
  */
 loadBalancer::loadBalancer(int numServers, int queueCap) : currentTime(0) {
     requestQueue.setCapacity(queueCap);
+    log.push_back("Starting queue size: " + std::to_string(queueCap));
     for (int i = 0; i < numServers; ++i) {
         servers.emplace_back(); // using emplace_back because servers are class type 
     }
@@ -96,8 +97,7 @@ void loadBalancer::run(int cycles) {
         }
     }
     log.push_back("Ending load balancer run.");
-    log.push_back("Starting queue size: " + std::to_string(servers.size() * 100));
-    log.push_back("Ending queue size: " + std::to_string(requestQueue.isEmpty() ? 0 : 1));
+    log.push_back("Ending queue size: " + std::to_string(requestQueue.getSize()));
 }
 
 /**

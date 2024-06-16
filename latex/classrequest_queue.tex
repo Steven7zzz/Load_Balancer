@@ -1,0 +1,109 @@
+\doxysection{request\+Queue Class Reference}
+\hypertarget{classrequest_queue}{}\label{classrequest_queue}\index{requestQueue@{requestQueue}}
+
+
+The \doxylink{classrequest_queue}{request\+Queue} class represents a queue of requests.  
+
+
+
+
+{\ttfamily \#include $<$request\+Queue.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrequest_queue_a407fba0125b48e5b6fe3c6271eb2c225}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if the queue is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrequest_queue_a497b44fb2d5023a60788b617d7a46c8f}{is\+Full}} () const
+\begin{DoxyCompactList}\small\item\em Check if the queue is full. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrequest_queue_a371e163188314533554892e2a53cdca2}{add\+Request}} (const \mbox{\hyperlink{structrequest}{request}} \&req)
+\begin{DoxyCompactList}\small\item\em Add a request to the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structrequest}{request}} \mbox{\hyperlink{classrequest_queue_a49ba3ad17fe671524dcb2a33ebeeeed3}{get\+Next\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Get the next request from the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrequest_queue_a4d673ab105fa9ca759a5a98e415f1148}{set\+Capacity}} (int cap)
+\begin{DoxyCompactList}\small\item\em Set the maximum capacity of the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classrequest_queue}{request\+Queue} class represents a queue of requests. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrequest_queue_a371e163188314533554892e2a53cdca2}\index{requestQueue@{requestQueue}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!requestQueue@{requestQueue}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily \label{classrequest_queue_a371e163188314533554892e2a53cdca2} 
+void request\+Queue\+::add\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrequest}{request}} \&}]{req}{}\end{DoxyParamCaption})}
+
+
+
+Add a request to the queue. 
+
+Add a new request to the queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The request to add to the queue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classrequest_queue_a49ba3ad17fe671524dcb2a33ebeeeed3}\index{requestQueue@{requestQueue}!getNextRequest@{getNextRequest}}
+\index{getNextRequest@{getNextRequest}!requestQueue@{requestQueue}}
+\doxysubsubsection{\texorpdfstring{getNextRequest()}{getNextRequest()}}
+{\footnotesize\ttfamily \label{classrequest_queue_a49ba3ad17fe671524dcb2a33ebeeeed3} 
+\mbox{\hyperlink{structrequest}{request}} request\+Queue\+::get\+Next\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the next request from the queue. 
+
+Get and remove the next request from the queue.
+
+\begin{DoxyReturn}{Returns}
+The next request in the queue. 
+\end{DoxyReturn}
+\Hypertarget{classrequest_queue_a407fba0125b48e5b6fe3c6271eb2c225}\index{requestQueue@{requestQueue}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!requestQueue@{requestQueue}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily \label{classrequest_queue_a407fba0125b48e5b6fe3c6271eb2c225} 
+bool request\+Queue\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if the queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+true if the queue is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrequest_queue_a497b44fb2d5023a60788b617d7a46c8f}\index{requestQueue@{requestQueue}!isFull@{isFull}}
+\index{isFull@{isFull}!requestQueue@{requestQueue}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily \label{classrequest_queue_a497b44fb2d5023a60788b617d7a46c8f} 
+bool request\+Queue\+::is\+Full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if the queue is full. 
+
+\begin{DoxyReturn}{Returns}
+true if the queue is full, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrequest_queue_a4d673ab105fa9ca759a5a98e415f1148}\index{requestQueue@{requestQueue}!setCapacity@{setCapacity}}
+\index{setCapacity@{setCapacity}!requestQueue@{requestQueue}}
+\doxysubsubsection{\texorpdfstring{setCapacity()}{setCapacity()}}
+{\footnotesize\ttfamily \label{classrequest_queue_a4d673ab105fa9ca759a5a98e415f1148} 
+void request\+Queue\+::set\+Capacity (\begin{DoxyParamCaption}\item[{int}]{cap}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the maximum capacity of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cap} & The maximum capacity to set for the queue. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{request_queue_8h}{request\+Queue.\+h}}\item 
+request\+Queue.\+cpp\end{DoxyCompactItemize}

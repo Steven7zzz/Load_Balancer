@@ -1,0 +1,69 @@
+\doxysection{utils.\+h File Reference}
+\hypertarget{utils_8h}{}\label{utils_8h}\index{utils.h@{utils.h}}
+
+
+Utility functions for generating random IP addresses and requests.  
+
+
+{\ttfamily \#include "{}request.\+h"{}}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{utils_8h_a0262883cd1482b5e76591b8333bd481d}{generate\+Random\+IP}} ()
+\begin{DoxyCompactList}\small\item\em Generate a random IP address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structrequest}{request}} \mbox{\hyperlink{utils_8h_a383b7db3efce9fc683dffef7f3b299d8}{generate\+Random\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Generate a random request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility functions for generating random IP addresses and requests. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{utils_8h_a0262883cd1482b5e76591b8333bd481d}\index{utils.h@{utils.h}!generateRandomIP@{generateRandomIP}}
+\index{generateRandomIP@{generateRandomIP}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{generateRandomIP()}{generateRandomIP()}}
+{\footnotesize\ttfamily \label{utils_8h_a0262883cd1482b5e76591b8333bd481d} 
+std\+::string generate\+Random\+IP (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generate a random IP address. 
+
+This function generates a random IPv4 address in string format.
+
+\begin{DoxyReturn}{Returns}
+Randomly generated IP address as a string. 
+\end{DoxyReturn}
+\Hypertarget{utils_8h_a383b7db3efce9fc683dffef7f3b299d8}\index{utils.h@{utils.h}!generateRandomRequest@{generateRandomRequest}}
+\index{generateRandomRequest@{generateRandomRequest}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{generateRandomRequest()}{generateRandomRequest()}}
+{\footnotesize\ttfamily \label{utils_8h_a383b7db3efce9fc683dffef7f3b299d8} 
+\mbox{\hyperlink{structrequest}{request}} generate\+Random\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generate a random request. 
+
+This function generates a random request containing\+:
+\begin{DoxyItemize}
+\item Random IP input address
+\item Random IP output address
+\item Random processing time
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Randomly generated request object.
+\end{DoxyReturn}
+This function creates a request object with\+:
+\begin{DoxyItemize}
+\item Random IP address for input
+\item Random IP address for output
+\item Random processing time between 5 and 9 clock cycles
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Randomly generated request object. 
+\end{DoxyReturn}
