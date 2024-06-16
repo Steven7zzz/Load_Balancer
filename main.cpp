@@ -1,19 +1,6 @@
 #include "loadBalancer.h"
-#include <iostream>
-#include <cstdlib>
+#include "utils.h"
 #include <ctime>
-
-std::string generateRandomIP() {
-    return std::to_string(rand() % 256) + "." + 
-           std::to_string(rand() % 256) + "." + 
-           std::to_string(rand() % 256) + "." + 
-           std::to_string(rand() % 256);
-}
-
-// creates a request with random IP addresses and a random processing time
-request generateRandomRequest() {
-    return request(generateRandomIP(), generateRandomIP(), rand() % 10 + 1);
-}
 
 int main() {
     srand(time(0));
@@ -25,7 +12,6 @@ int main() {
     std::cout << "Enter the run time (in clock cycles): ";
     std::cin >> runTime;
 
-
     // initialize the load balancer with the specified number of servers.
     loadBalancer loadBalancer(numServers);
 
@@ -36,6 +22,8 @@ int main() {
 
     // runs the load balancer simulation for the specified number of clock cycles
     loadBalancer.run(runTime);
+
+    loadBalancer.saveLogToFile("load_balancer_log.txt");
 
     return 0;
 }

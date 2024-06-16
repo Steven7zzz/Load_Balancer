@@ -1,6 +1,7 @@
 #ifndef REQUEST_H
 #define REQUEST_H
 
+#include <iostream>
 #include <queue>
 #include <string>
 

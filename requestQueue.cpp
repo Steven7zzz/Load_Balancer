@@ -18,3 +18,7 @@ request requestQueue::getNextRequest() {
 bool requestQueue::isEmpty() const {
     return queue.empty();
 }
+
+bool requestQueue::isFull() const {
+    return queue.size() >= capacity;
+}
