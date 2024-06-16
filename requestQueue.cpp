@@ -1,25 +1,39 @@
 #include "requestQueue.h"
 
-// add a new request to the queue.
+/**
+ * @brief Add a new request to the queue.
+ *
+ * @param req The request to add to the queue.
+ */
 void requestQueue::addRequest(const request& req) {
     queue.push(req);
 }
 
-
-// get and remove the next request from the queue.
+/**
+ * @brief Get and remove the next request from the queue.
+ *
+ * @return The next request in the queue.
+ */
 request requestQueue::getNextRequest() {
     request req = queue.front();
     queue.pop();
     return req;
 }
 
-
-// get if the queue is empty.
+/**
+ * @brief Check if the queue is empty.
+ *
+ * @return true if the queue is empty, false otherwise.
+ */
 bool requestQueue::isEmpty() const {
     return queue.empty();
 }
 
-// get if the queue is full.
+/**
+ * @brief Check if the queue is full.
+ *
+ * @return true if the queue is full, false otherwise.
+ */
 bool requestQueue::isFull() const {
     return queue.size() >= capacity;
 }

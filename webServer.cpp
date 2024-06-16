@@ -1,16 +1,29 @@
 #include "webServer.h"
 
-// initializes the server as not busy with no remaining time
+/**
+ * @brief Default constructor for webServer.
+ *
+ * Initializes the server as not busy with no remaining time.
+ */
 webServer::webServer() : busy(false), remainingTime(0) {}
 
-
-// get the busy status of the server
+/**
+ * @brief Check if the server is currently busy processing a request.
+ *
+ * @return true if the server is busy, false otherwise.
+ */
 bool webServer::isBusy() const {
     return busy;
 }
 
-
-// starts processing a request and sets the remaining processing time.
+/**
+ * @brief Start processing a new request.
+ *
+ * Sets the server to busy, initializes remaining processing time,
+ * and records details of the current request.
+ *
+ * @param req The request to be processed.
+ */
 void webServer::processRequest(const request& req) {
     busy = true;
     justFinished = false;
@@ -18,8 +31,12 @@ void webServer::processRequest(const request& req) {
     currentRequest = req.ipInput + " -> " + req.ipOutput + " with time " + std::to_string(req.time);
 }
 
-
-// decrements the remaining time each clock cycle and updates the busy status.
+/**
+ * @brief Simulate the passage of time while processing a request.
+ *
+ * Decrements the remaining processing time each clock cycle.
+ * Updates the busy status and sets justFinished flag when the request is completed.
+ */
 void webServer::tick() {
     if (busy && remainingTime > 0) {
         remainingTime--;
@@ -30,7 +47,11 @@ void webServer::tick() {
     }
 }
 
-// Method to get details of the current request
+/**
+ * @brief Get details of the current request being processed.
+ *
+ * @return String representation of the current request.
+ */
 std::string webServer::getCurrentRequest() const {
     return currentRequest;
 }

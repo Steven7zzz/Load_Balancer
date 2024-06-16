@@ -1,7 +1,17 @@
 #include "loadBalancer.h"
 #include "utils.h"
 
-// initializes the load balancer with number of servers and set queue capcity
+/**
+ * @file loadBalancer.cpp
+ * @brief Implementation of the loadBalancer class methods.
+ */
+
+/**
+ * @brief Constructor to initialize the load balancer with specified parameters.
+ *
+ * @param numServers Number of servers to initialize.
+ * @param queueCap Capacity of the request queue.
+ */
 loadBalancer::loadBalancer(int numServers, int queueCap) : currentTime(0) {
     requestQueue.setCapacity(queueCap);
     for (int i = 0; i < numServers; ++i) {
@@ -10,8 +20,11 @@ loadBalancer::loadBalancer(int numServers, int queueCap) : currentTime(0) {
     log.push_back("LoadBalancer initialized with " + std::to_string(numServers) + " servers.");
 }
 
-
-// add a new request to the request queue
+/**
+ * @brief Adds a new request to the load balancer's request queue.
+ *
+ * @param req The request to add.
+ */
 void loadBalancer::addRequest(const request& req) {
     if (!requestQueue.isFull()) {
         requestQueue.addRequest(req);
@@ -21,11 +34,17 @@ void loadBalancer::addRequest(const request& req) {
     }
 }
 
+/**
+ * @brief Adds a new server to the pool of servers.
+ */
 void loadBalancer::addServer() {
     servers.emplace_back();
     log.push_back("Added a new server. Total servers: " + std::to_string(servers.size()));
 }
 
+/**
+ * @brief Removes a server from the pool of servers.
+ */
 void loadBalancer::removeServer() {
     if (!servers.empty()) {
         servers.pop_back();
@@ -33,9 +52,9 @@ void loadBalancer::removeServer() {
     }
 }
 
-
-
-// distributes requests from the queue to the servers, if any servers are not busy
+/**
+ * @brief Balances the load by distributing requests from the queue to available servers.
+ */
 void loadBalancer::balanceLoad() {
     for (auto& server : servers) {
         if (!server.isBusy() && !requestQueue.isEmpty()) {
@@ -45,8 +64,11 @@ void loadBalancer::balanceLoad() {
     }
 }
 
-
-// simulates the operation of the load balancer for a specified number of clock cycles
+/**
+ * @brief Simulates the operation of the load balancer for a specified number of clock cycles.
+ *
+ * @param cycles Number of clock cycles to run the simulation.
+ */
 void loadBalancer::run(int cycles) {
     log.push_back("Starting load balancer run for " + std::to_string(cycles) + " cycles.");
     for (int i = 0; i < cycles; ++i) {
@@ -61,10 +83,12 @@ void loadBalancer::run(int cycles) {
         }
         currentTime++;
 
+        // Add a random number of new requests to the queue
         for (int i = 0; i < rand() % 10; i++){
             addRequest(generateRandomRequest());
         }
         
+        // Adjust number of servers based on queue status
         if (requestQueue.isFull() && servers.size() < 100) { // Cap at 100 servers to prevent excessive growth
             addServer();
         } else if (requestQueue.isEmpty() && servers.size() > 1) { // Ensure at least one server remains
@@ -76,6 +100,11 @@ void loadBalancer::run(int cycles) {
     log.push_back("Ending queue size: " + std::to_string(requestQueue.isEmpty() ? 0 : 1));
 }
 
+/**
+ * @brief Saves the log messages to a text file.
+ *
+ * @param filename The name of the file to save the log to.
+ */
 void loadBalancer::saveLogToFile(const std::string& filename) const {
     std::ofstream outFile(filename);
     if (outFile.is_open()) {
