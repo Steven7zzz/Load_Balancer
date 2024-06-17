@@ -13,6 +13,7 @@
  * @param queueCap Capacity of the request queue.
  */
 loadBalancer::loadBalancer(int numServers, int queueCap) : currentTime(0) {
+    log.push_back("Range of task times: 5 - 9" );
     requestQueue.setCapacity(queueCap);
     log.push_back("Starting queue size: " + std::to_string(queueCap));
     for (int i = 0; i < numServers; ++i) {
